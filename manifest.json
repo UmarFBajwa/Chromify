@@ -10,9 +10,23 @@
    "default_popup": "popup.html"
   },
 
-  "background": {
-    "scripts": ["script.js"]
-  },
+  "content_scripts": [
+      {
+          "matches": [
+              "<all_urls>"
+          ],
+          "js": [
+              "modal.js"
+          ],
+          "html": [
+              "modal.html"
+          ]
+      }
+  ],
+
+  "web_accessible_resources": [
+      "spinner_progress.gif"
+  ],
 
   "permissions": [
    "activeTab"
